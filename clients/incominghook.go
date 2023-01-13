@@ -3,9 +3,10 @@ package clients
 import (
 	"bytes"
 	"encoding/json"
-	"github.com/sirupsen/logrus"
-	"io/ioutil"
+	"io"
 	"net/http"
+
+	"github.com/sirupsen/logrus"
 )
 
 var (
@@ -59,7 +60,7 @@ func (d *DoorayHookClient) SendMessage(message DoorayMessage) error {
 		logrus.Errorf("fail to request POST to dooray service, error=%s", err.Error())
 		return err
 	}
-	respBody, err := ioutil.ReadAll(resp.Body)
+	respBody, err := io.ReadAll(resp.Body)
 	logrus.Infof("response message from dooray service, message=%s", string(respBody))
 	return nil
 }

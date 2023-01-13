@@ -1,8 +1,9 @@
 package main
 
 import (
-	"github.com/deepdiveinwinter/dooray-bot/clients"
 	"os"
+
+	"github.com/deepdiveinwinter/dooray-bot/clients"
 )
 
 var (
