@@ -6,7 +6,7 @@ DOORAY_HOOK_URL="https://hook.dooray.com/services/{{SERVICE_HOOK}}"
 
 .PHONY: build
 build:
-	docker build -t ${DOORAY_BOOT_IMAGE_NAME}:${DOORAY_BOOT_IMAGE_VERSION} -f ./Dockerfile .
+	docker build -t ${DOORAY_BOOT_IMAGE_NAME}:${DOORAY_BOOT_IMAGE_VERSION} .
 
 .PHONY: run
 run:
