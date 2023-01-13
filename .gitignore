@@ -1,4 +1,10 @@
-*.log
+/*.log
+*.yml
+*.yaml
 
-.vscode
+!/dooray-bot-cronjob.yml
+
+/.vscode
 .idea
+
+/vendor
