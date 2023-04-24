@@ -4,8 +4,6 @@ ARG DOORAY_HOOK_URL="https://hook.dooray.com/services/example"
 
 FROM golang:${GO_VERSION}-alpine AS builder
 
-ENV CGO_ENABLED=0
-
 WORKDIR "/go/src/dooray-bot"
 
 COPY clients ./clients
